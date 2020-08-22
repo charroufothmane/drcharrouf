@@ -41,7 +41,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'dental.urls'
@@ -120,7 +120,7 @@ STATICFILES_DIRS = [
 ]
 
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO' ,'localhost')
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -128,8 +128,7 @@ EMAIL_HOST_USER = 'elfarah61@gmail.com'
 EMAIL_HOST_PASSWORD = 'hellohello'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT =1025

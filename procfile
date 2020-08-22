@@ -1,1 +1,4 @@
-web: gunicorn mysite.config.settings.wsgi
+release: python manage.py migrate
+
+
+web: gunicorn dental.wsgi

@@ -8,8 +8,8 @@ from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-env=environ.Env(SECRET_KEY=str,)
-environ.Env.read_env(os.path.join(BASE_DIR,'.env'))
+# env=environ.Env(SECRET_KEY=str,)
+# environ.Env.read_env(os.path.join(BASE_DIR,'.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -18,7 +18,7 @@ SECRET_KEY = 'q^_)!0azrui0*wg3c%q=ff*5f8fzi_a0-kxml#v9!@62kns&1&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS =["allahakbarkabira.herokuapp.com"]
+ALLOWED_HOSTS =['allahakbarkabira.herokuapp.com']
 
 
 # Application definition
@@ -41,7 +41,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'dental.urls'
@@ -120,7 +120,7 @@ STATICFILES_DIRS = [
 ]
 
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO' ,'localhost')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
